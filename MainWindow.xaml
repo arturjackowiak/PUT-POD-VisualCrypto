@@ -1,0 +1,42 @@
+﻿<Window x:Class="Visual_Crypto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Visual_Crypto"
+        mc:Ignorable="d"
+        Background="#505461"
+        Title="MainWindow" Height="470" Width="820">
+    <Grid>
+
+        <Grid.Effect>
+            <DropShadowEffect/>
+        </Grid.Effect>
+
+        <Button x:Name="StartButton" Click="StartButton_Click" Content="Start" FontSize="16" HorizontalAlignment="Left" Margin="716,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.344,0.656" Width="72"/>
+
+        <Grid Margin="23,27,109,27">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="180*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="180*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Input" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Result" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Margin="154,0,0,0"/>
+            <Label Content="Division 2" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Margin="141,0,0,0" Grid.Row="2"/>
+            <Label Content="Division 1" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2"/>
+
+            <Image x:Name="InputImage" Stretch="Uniform" Grid.Column="0" Grid.Row="1"/>
+            <Image x:Name="OutputImage" Stretch="Uniform" Grid.Row="1" Grid.Column="1"/>
+            <Image x:Name="Division1Image" Stretch="Uniform" Grid.Row="3" Grid.Column="0"/>
+            <Image x:Name="Division2Image" Stretch="Uniform" Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
